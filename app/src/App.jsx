@@ -29,7 +29,7 @@ function App() {
   }
   
 
-  //memoized cllbac
+  //memoized cllback
   const debounced=useCallback(debounce(handleChange), [])
 
   return (
