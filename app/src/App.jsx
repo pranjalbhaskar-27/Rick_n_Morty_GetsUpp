@@ -13,27 +13,28 @@ function App() {
   const [loading,setLoading]=useState(true)
   const [lastel,setLastel]=useState(null)
 
-  const observer = useRef(
-    new IntersectionObserver(
-        (entries) => {
-            const first = entries[0];
-            if (first.isIntersecting) {
-                setPage((no) => no + 1);
-            }
-        })
-);
+//   const observer = useRef(
+//     new IntersectionObserver(
+//         (entries) => {
+//             const first = entries[0];
+//             if (first.isIntersecting) {
+//                 setPage((no) => no + 1);
+//             }
+//         })
+// );
 
   useEffect(()=>{
         
     const charRandom=async()=>{
         setLoading(true)
-            let res=await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`).then(({data})=>{
+        // let res=await 
+            axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`).then(({data})=>{
                 
                 console.log(data.results)
                 setSdata(data.results)
                 setLoading(false)
             })
-            let all = new Set([...sdata, ...res.data.results]);
+            // let all = new Set([...sdata, ...res.data.results]);
         }
         charRandom()
     }, [])
