@@ -1,42 +1,218 @@
+body{
+  
+  background-color: azure;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  font-size: 1.09vw;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchInput{
+  margin-bottom:1%;
+  width: 22.2vw;
+  height: 2.0vw;
+  border: transparent;
+  border-radius: 2px;
+  font-size: 0.8vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.autoBox{
+  /* border: 1px solid teal; */
+  width: 35vw;
+  height: 36vw;
+  margin: auto;
+  overflow: hidden;
+  /* overflow-wrap: normal; */
+  overflow: scroll;
+  
+}
+.autoBox::-webkit-scrollbar {
+  display: none;
+}
+.autoDisp{
+  /* border: 1px solid lime; */
   display: flex;
-  flex-direction: column;
+  width: 95%;
+  margin: auto;
+  margin: 0.5%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: space-between; */
+  background-color: white;
+  border-radius: 2px;
+  font-size: 1.09vw;
+}
+.imgBox{
+  width: 15%;
+}
+.imgBox>img{
+  width: 100%;
+  border-radius: 50%;
+}
+.charName{
+  width: 100%;
+  text-align: left;
+}
+.status{
+  display: flex;
+  align-items: center;
+}
+.greenCircle{
+  background-color: lime;
+  width: .59vw;
+  border-radius: 50%;
+  height: .59vw;
+}
+.greyCircle{
+  background-color: gray;
+  width: .59vw;
+  border-radius: 50%;
+  height: .59vw;
+}
+.redCircle{
+  background-color: red;
+  width: .59vw;
+  border-radius: 50%;
+  height: .59vw;
+}
+.left{
+  width: 60%;
+}
+.right{
+  width: 40%;
+}
+.left,.right{
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.left div,.right div{
+  margin: 1%;
 }
 
-.App-link {
-  color: #61dafb;
+/* .popDisp{
+  width: 100px;
+  margin: auto;
+  height: 100px;
+} */
+.popCont{
+  position:fixed;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0,0,0,0.4);
+  padding-top: 6%;
+}
+.popModal{
+  top: 5;
+  margin: auto;
+  /* border: 1px solid teal; */
+  width: 25vw;
+  height: 15vw;
+  background-color: white;
+  border-radius: 12px;
+}
+.popModal div{
+  font-size: 0.7vw;
+}
+.killButton{
+  
+  width: 100%;
+  text-align: right;
+  /* border: 1px solid red; */
+  
+}
+.killModalbttn{
+  background-color: white;
+  border: transparent;
+  color: grey;
+  font-size: large;
+  /* font-weight: bold; */
+  margin-right: 1%;
+  margin-top: 1%;
+  font-size: 1.3vw;
+}
+hr{
+  background-color: rgb(222, 201, 201);
+  width: 80%;
+  height: 0.5px;
+}
+.topDet, .bottomDet{
+  /* border: 1px solid red; */
+  display: flex;
+  
+  width: 78%;
+  margin: auto;
+  text-align: left;
+  
+}
+.imgProf>img{
+  max-width: 100%;
+}
+.bottomDetl{
+  height: 500px;
+}
+.imgProf{
+  width: 30%;
+  
+}
+.imgProf>img{
+  max-width: 100%;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topright{
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+.trightDet{
+  width: 100%;
+}
+.trightDet>p{
+  text-align: left;
+  font-weight: bolder;
+}
+.trightfDet{
+  display: flex;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.bottomDet>div {
+  width: 100%;
+  /* height: 50%; */
 }
+.topDet>img{
+
+}
+.b1,.b2{
+  display: flex;
+  /* border: 1px solid purple; */
+  width: 100%;
+  margin: 2%;
+  /* align-items: center; */
+}
+.bTitle>div:nth-child(1){
+  background-color: yellow;
+
+}
+.bTitle1{
+  /* border:1px solid teal; */
+  width: 25%;
+}
+.bTitle2{
+  /* border: 1px solid red; */
+  width: 60%;
+  margin-left: 20%;
+  
+}
+.bTitle1>div:nth-child(1),.bTitle2>div:nth-child(1){
+  font-size: smaller;
+}
+
+.bTitle1>div:nth-child(2),.bTitle2>div:nth-child(2){
+  font-weight: bold;
+}
+/* *{
+  border: 1px solid blue;
+} */
