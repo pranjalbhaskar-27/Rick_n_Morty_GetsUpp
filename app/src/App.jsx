@@ -10,24 +10,38 @@ function App() {
   const [popdisp,setPopdisp]=useState([])
   const [mountModal, setMountModal] = useState(false)
   const [page,setPage]=useState(1)  
+  const [loading,setLoading]=useState(true)
+  const [lastel,setLastel]=useState(null)
+
+  const observer = useRef(
+    new IntersectionObserver(
+        (entries) => {
+            const first = entries[0];
+            if (first.isIntersecting) {
+                setPage((no) => no + 1);
+            }
+        })
+);
 
   useEffect(()=>{
         
-    const charRandom=()=>{
-            axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`).then(({data})=>{
+    const charRandom=async()=>{
+        setLoading(true)
+            let res=await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`).then(({data})=>{
                 
                 console.log(data.results)
                 setSdata(data.results)
+                setLoading(false)
             })
+            let all = new Set([...sdata, ...res.data.results]);
         }
         charRandom()
     }, [])
 
 
-    const observer=useRef()
-    useEffect(()=>{
+    
 
-    })
+
   //addded debouncing
   const debounce=(debo)=>{
 
